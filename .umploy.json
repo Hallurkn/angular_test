@@ -1,0 +1,22 @@
+{
+	"dpl": [
+		{
+			"provider": "s3",
+			"access_key_id": "AKIAJRZLPENLOXWD4TMA",
+			"secret_access_key": {
+				"secure": "KuPFzo+sZq7MdfX1xmNxGQC1nDFSZ/mAE9P1bjOINtFUAjbFdt5+O755mTW2WIcsvt5s08FlijzZzywIRWqrHEQYZIDbF4wkSz8YpJf9uDGbewK9T5PSj2yIhWp2t194MhG8IzvbWj24gEjVxdV+IG/HeHrOErhfV6YJ6CkU20zt+P0Qy6i9OVPXIrBVpEm7ooHAFgewciel6qlcFCUnTmpG5cVDR+YpKc7Ixj9RQUmuQbTGhb1E0X73kyLkJB6b5ibP9uFxeeopHs8L6zHavfDE9xksd/CSj6jtFZHm3RgA3dFNy9DkeAbFSceHngBnoWoWjhO3kfOELjm0lsdMKREKvMIyGuZfshHNd/KultNwcvvZRCWVZIeNA8QQVnhbrXFMjyyZBBkcMFYmEDc0awkabcd6S9eFYNw6vRrG9h0Zqcd+P4fT0jlgAN2EcLEOy3dMpddGoh8u0MJF8Mrf8d1AVqd4kXOEG6WcbkbyK/KpHXRvglniZz92Eo/Ji83TLLLanGN1a6B9tH9lxqulg5iwwJy86Fw5RotgM5aXfh//3F8V51ZsIAUdu2qhXtXcteuZzDDQn1tbY9xQUlukFtI+T/ddK2Fp8RhF+SWfBJBK/UVto06gM3kMAJ5O5YG9uiI46vhT69rsWGXR+0ok6y2EShpb7hU0+oOoMSqDaio="
+			},
+			"region": "eu-west-1",
+			"bucket": "boilerplate-ng-static.prod.umw.dk",
+			"zip_file": "Dockerrun.aws.json",
+			"local-dir": "dist",
+			"skip_cleanup": true,
+			"acl": "public_read",
+			"on": {
+				"tags": true,
+				"repo": "umweltdk/boilerplate-ng-static",
+				"branch": "master"
+			}
+		}
+	]
+}

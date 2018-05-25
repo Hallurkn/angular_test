@@ -1,0 +1,8 @@
+<header-component></header-component>
+<div [hidden]="!loading" class="loader container" >
+	<h2>Loading...</h2>
+</div>
+<div [hidden]="loading" class="router-output">
+	<router-outlet></router-outlet>
+</div>
+<footer-component></footer-component>

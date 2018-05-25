@@ -1,0 +1,27 @@
+<div class="form-group">
+	<div class="mb-1 clearfix">
+		<button class="btn btn-sm bg-primary text-white float-right" (click)="this.sortByLetter()">A-Å</button>
+	</div>
+
+	<div class="mb-1 clearfix">
+		<button class="btn btn-sm bg-primary text-white float-right" (click)="this.sortByYear()">Årstal</button>
+	</div>
+
+	<select class="custom-select mb-1" (change)="this.filterByCountry($event.target.value)">
+		<option value="" selected>Alle Lande</option>
+		<option *ngFor="let movie of countriesOption;" value="{{movie.Country}}">{{movie.Country}}</option>
+	</select>
+
+	<select class="custom-select mb-1" (change)="this.filterByGenre($event.target.value)">
+		<option value="" selected>Alle Genrer</option>
+		<option *ngFor="let movie of genresOption;" value="{{movie.Genre}}">{{movie.Genre}}</option>
+	</select>
+
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">@</span>
+		</div>
+		<input #searchInput type="text" class="form-control" placeholder="Søg film" (input)="this.updateSearchFilter(searchInput.value)"
+		aria-label="Search" aria-describedby="basic-addon1">
+	</div>
+</div>

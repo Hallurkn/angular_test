@@ -1,0 +1,18 @@
+<div class="card col col-md-6 offset-md-3 bg-faded">
+	<div class="card-block">
+		<form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm)">
+			<div class="form-group">
+				<label for="id">Imdb ID</label>
+				<input class="form-control" type="text" name="id" id="id" [(ngModel)]="id" #idCheck="ngModel" placeholder="ex. tt3774694"
+				required>
+				<div class="alert alert-info" [hidden]="!this.statusMessage || idCheck.pristine">{{this.statusMessage}}</div>
+			</div>
+
+			<div class="mb-3">
+				<button class="btn btn-sm btn-success" type="submit" [disabled]="!movieForm.form.valid">Add Movie</button>
+				<button class="btn btn-sm btn-danger" type="button" [disabled]="!movieForm.form.valid" (click)="onDelete(movieForm)">Delete Movie</button>
+				<button class="btn btn-sm btn-info" type="button" (click)="onCancel(movieForm)">Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>

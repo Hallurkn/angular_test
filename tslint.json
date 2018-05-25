@@ -1,0 +1,18 @@
+{
+	"extends": "tslint-angular",
+	"rules": {
+		"quotemark": [true, "single"],
+		"indent": [true, "tabs"],
+		"no-console": {
+			"severity": "warning",
+			"options": [
+				"debug",
+				"info",
+				"log",
+				"time",
+				"timeEnd",
+				"trace"
+			]
+		}
+	}
+}

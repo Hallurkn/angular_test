@@ -1,0 +1,18 @@
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	height: 77.5px;
+	.nav-item,
+	.dropdown-item {
+		letter-spacing: 1px;
+		font-weight: bold;
+		transition: color 100ms ease-in-out;
+		.nav-link {
+			transition: color 100ms ease-in-out;
+			color: white;
+		}
+	}
+}

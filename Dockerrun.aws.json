@@ -1,0 +1,14 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "${DOCKER_TAG}",
+    "Update": true
+  },
+  "Ports": [{
+    "ContainerPort": "8080"
+  }],
+  "Authentication": {
+    "Bucket": "umwelt-elasticbeanstalk-config-eu-west-1",
+    "Key": "dockercfg.json"
+  }
+}

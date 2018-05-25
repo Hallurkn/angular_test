@@ -1,0 +1,19 @@
+<div class="my-5" *ngIf="movies">
+	<div class="my-3">
+		<h3>{{ message }}</h3>
+	</div>
+
+	<div lazy-load-images>
+		<ngx-slick class="carousel" [config]="slideConfig">
+			<div ngxSlickItem *ngFor="let movie of movies" class="slide">
+				<div class="img-wrapper">
+					<img [attr.data-src]="movie.Poster" alt="" width="100%">
+				</div>
+			</div>
+		</ngx-slick>
+	</div>
+
+	<div class="my-3">
+		<a class="btn bg-primary" [routerLink]="['/', 'movies']">Se Flere</a>
+	</div>
+</div>

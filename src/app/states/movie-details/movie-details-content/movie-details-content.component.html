@@ -1,0 +1,19 @@
+<div class="my-5" *ngIf="movie">
+	<h1 class="text-center">{{movie.Title}}</h1>
+
+	<div>Vimeo video</div>
+
+	<p>Genre: {{movie.Genre}}</p>
+	<p>Runtime: {{movie.Runtime}}</p>
+	<p>Language: {{movie.Language}}</p>
+	<p>Subtitles: {{movie.Subtitles}}</p>
+
+	<p>{{movie.Plot}}</p>
+
+	<img src="{{movie.Poster}}" alt="{{movie.Title}}">
+
+	<p>Director: {{movie.Director}}</p>
+	<p>Actors: {{movie.Actors}}</p>
+	<p>Country: {{movie.Country}}</p>
+	<p>Year {{movie.Year}}</p>
+</div>

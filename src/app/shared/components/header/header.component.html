@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm bg-primary text-uppercase py-3 px-sm-0">
+	<div class="container">
+		<a class="navbar-brand" [routerLink]="['/']">
+			<img src="./assets/filmperler_logo.png" alt="Filmperler Logo" width="200">
+		</a>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav ml-auto">
+				<li routerLinkActive="active" class="nav-item">
+					<a class="nav-link" [routerLink]="['/', 'movies']">Find Film</a>
+				</li>
+				<li routerLinkActive="active" class="nav-item dropdown" dropdown>
+					<a class="nav-link dropdown-toggle" dropdownToggle [routerLink]="['/', 'about']" id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+						Om
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Om Filmperler</a>
+						<a class="dropdown-item" href="#">Spørgsmål &amp; Svar</a>
+						<a class="dropdown-item" href="#">Kontakt</a>
+						<a class="dropdown-item" href="#">Find Os</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

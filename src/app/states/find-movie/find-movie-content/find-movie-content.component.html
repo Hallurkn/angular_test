@@ -1,0 +1,18 @@
+<div class="row" lazy-load-images>
+	<div class="col-xl-3 col-lg-4 col-sm-6 col-12" *ngFor="let movie of filteredMovies | filter:searchFilter ">
+		<div class="movie mb-4" [attr.data-background-src]="movie.Poster">
+			<a [routerLink]="['/details', movie.id]">
+				<div class="hover-content d-flex flex-column justify-content-between text-white p-2 text-uppercase h-100 text-center">
+					<div>
+						<h6 class="title mb-0">{{movie.Title}} ({{movie.Year}})</h6>
+						<div class="mb-1 genres">{{movie.Genre}}</div>
+
+						<div class="mb-1 runtime">{{movie.Runtime}}</div>
+						<div class="mb-1 rating">IMDB {{movie.imdbRating}}/10</div>
+					</div>
+					<button class="btn btn-sm btn-primary text-white pb-2">Se mere</button>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
