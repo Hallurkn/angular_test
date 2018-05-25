@@ -6,9 +6,7 @@
 	<div lazy-load-images>
 		<ngx-slick class="carousel" [config]="slideConfig">
 			<div ngxSlickItem *ngFor="let movie of movies" class="slide">
-				<div class="img-wrapper">
-					<img [attr.data-src]="movie.Poster" alt="" width="100%">
-				</div>
+				<img [attr.data-src]="movie.Poster" alt="" width="100%">
 			</div>
 		</ngx-slick>
 	</div>

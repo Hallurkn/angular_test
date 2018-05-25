@@ -10,6 +10,9 @@ import * as _ from 'lodash';
 })
 export class FindMoviesFiltersComponent {
 
+	public showFilters = true;
+	public searchFilter: string = '';
+
 	public staticMovies: any;
 	public filteredMovies: any;
 
@@ -38,6 +41,17 @@ export class FindMoviesFiltersComponent {
 
 		// Reset filter in case someone leaves page and comes back
 		this.filterMovies();
+	}
+
+	resetFilter() {
+		this.curCountryFilter = '';
+		this.curGenreFilter = '';
+		this.searchFilter = '';
+		this.filterMovies();
+	}
+
+	toggleFilterComponent() {
+		this.showFilters = !this.showFilters;
 	}
 
 	// Emit the search filter to parent

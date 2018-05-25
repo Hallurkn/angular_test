@@ -12,7 +12,8 @@ export class HomeContentComponent {
 	public movies: any;
 
 	public slick1entries = [
-		'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753'
+		'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753',
+		'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592'
 	];
 	public slick1movies = [];
 
@@ -47,7 +48,38 @@ export class HomeContentComponent {
 				},
 			};
 
-		this.data.movies.subscribe(movieData => {
+		this.slideConfigSecondary = {
+			slidesToShow: 8,
+			slidesToScroll: 8,
+			arrows: true,
+			infinite: true,
+			responsive: [
+				{
+					breakpoint: 748,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 4,
+					}
+				},
+				{
+					breakpoint: 580,
+					settings: {
+						arrows: false,
+						slidesToShow: 4,
+						slidesToScroll: 4,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					}
+				},
+			};
+
+
+			this.data.movies.subscribe(movieData => {
 			this.movies = movieData;
 			this.filterMovies(this.slick1entries, this.slick1movies);
 		});
