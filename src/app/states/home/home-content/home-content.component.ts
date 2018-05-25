@@ -1,8 +1,6 @@
 import { ApiService } from './../../../shared/services/api.service';
 import { Component } from '@angular/core';
 
-import * as _ from 'lodash';
-
 @Component({
 	selector: 'home-content-component',
 	templateUrl: './home-content.component.html',
@@ -58,9 +56,12 @@ export class HomeContentComponent {
 
 	filterMovies(imdbIDs, slickMovies) {
 		for (let i = 0; i < imdbIDs.length; i++) {
-			slickMovies.push(
-				_.find(this.movies, function (o) { return o.imdbID === imdbIDs[i]; })
-			);
+			for(let j = 0; j < this.movies.length; j++) {
+				if(imdbIDs[i] === this.movies[j].imdbID) {
+					slickMovies.push(this.movies[j]);
+					continue;
+				}
+			}
 		}
 	}
 }

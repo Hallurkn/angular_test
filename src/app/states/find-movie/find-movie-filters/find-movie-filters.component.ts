@@ -1,6 +1,8 @@
 import { MovieFilterService } from '_shared/services/';
 import { Component, Output, EventEmitter } from '@angular/core';
 
+import * as _ from 'lodash';
+
 @Component({
 	selector: 'find-movie-filters-component',
 	templateUrl: './find-movie-filters.component.html',
@@ -23,9 +25,9 @@ export class FindMoviesFiltersComponent {
 	@Output() filterEvent = new EventEmitter<string>();
 
 	constructor(private data: MovieFilterService) {
-		this.data.filteredMovies.subscribe(data => {
-			this.filteredMovies = data;
-			this.fullMovieList = data;
+		this.data.filteredMovies.subscribe(movieData => {
+			this.filteredMovies = movieData;
+			this.fullMovieList = movieData;
 			this.getCountriesOption();
 			this.getGenresOption();
 		});
