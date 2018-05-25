@@ -126,7 +126,8 @@ $spacers: map-merge((
   2: ($spacer * .5),
   3: $spacer,
   4: ($spacer * 1.5),
-  5: ($spacer * 3)
+  5: ($spacer * 3),
+  6: ($spacer * 5)
 ), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -575,7 +576,7 @@ $dropdown-link-hover-color:         lighten($fp-red, 20%) !default;
 $dropdown-link-hover-bg:            transparent !default;
 
 $dropdown-link-active-color:        $component-active-color !default;
-$dropdown-link-active-bg:           $component-active-bg !default;
+$dropdown-link-active-bg:           $fp-red2 !default;
 
 $dropdown-link-disabled-color:      $gray-600 !default;
 

@@ -2,8 +2,12 @@ img {
 	width: 100%;
 }
 
-.info {
-	span {
-		display: block;
+
+.text-content {
+	max-width: 600px;
+	.movie-info {
+		span {
+			display: block;
+		}
 	}
 }

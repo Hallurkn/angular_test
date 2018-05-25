@@ -15,18 +15,4 @@ nav {
 			color: white;
 		}
 	}
-
-	.container {
-		opacity: 0;
-		animation: header-anim 1s 500ms forwards;
-	}
-}
-
-@keyframes header-anim {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
 }

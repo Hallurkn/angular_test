@@ -50,7 +50,6 @@ export class HomeContentComponent {
 		this.data.movies.subscribe(movieData => {
 			this.movies = movieData;
 			this.filterMovies(this.slick1entries, this.slick1movies);
-			console.log(this.slick1movies);
 		});
 	}
 

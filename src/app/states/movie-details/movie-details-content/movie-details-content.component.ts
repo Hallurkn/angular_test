@@ -19,7 +19,6 @@ export class MovieDetailsContentComponent {
 			this.data.getMovieById(id)
 				.subscribe(movie => {
 					this.movie = movie;
-					console.log(this.movie);
 				}
 				);
 		});
