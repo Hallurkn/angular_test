@@ -38,7 +38,7 @@
       "BoxOffice": "$31,716,847",
       "Production": "Focus Features",
       "Website": "http://www.filminfocus.com/focusfeatures/film/milk/",
-			"Response": "True",
+      "Response": "True",
       "id": 3
     },
     {
@@ -660,6 +660,445 @@
       "Website": "http://www.starwars.com/episode-ii/",
       "Response": "True",
       "id": 22
+    },
+    {
+      "Title": "The Girl Next Door",
+      "Year": "2004",
+      "Rated": "R",
+      "Released": "09 Apr 2004",
+      "Runtime": "109 min",
+      "Genre": "Comedy, Drama, Romance",
+      "Director": "Luke Greenfield",
+      "Writer": "David Wagner (story), Brent Goldberg (story), Stuart Blumberg (screenplay), David Wagner (screenplay), Brent Goldberg (screenplay)",
+      "Actors": "Emile Hirsch, Elisha Cuthbert, Timothy Olyphant, James Remar",
+      "Plot": "A teenager's dreams come true when a former porn star moves in next door and they fall in love.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "2 wins & 4 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BMTQ0ODIyMzE1N15BMl5BanBnXkFtZTcwODEwODczMw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "56%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "47/100"
+        }
+      ],
+      "Metascore": "47",
+      "imdbRating": "6.7",
+      "imdbVotes": "183,280",
+      "imdbID": "tt0265208",
+      "Type": "movie",
+      "DVD": "24 Aug 2004",
+      "BoxOffice": "$14,544,008",
+      "Production": "20th Century Fox",
+      "Website": "http://www.thegirlnextdoormovie.com",
+      "Response": "True",
+      "id": 23
+    },
+    {
+      "Title": "She's Out of My League",
+      "Year": "2010",
+      "Rated": "R",
+      "Released": "12 Mar 2010",
+      "Runtime": "104 min",
+      "Genre": "Comedy, Romance",
+      "Director": "Jim Field Smith",
+      "Writer": "Sean Anders, John Morris",
+      "Actors": "Jay Baruchel, Alice Eve, T.J. Miller, Mike Vogel",
+      "Plot": "An average Joe meets the perfect woman, but his lack of confidence and the influence of his friends and family begin to pick away at the relationship.",
+      "Language": "English, Ukrainian",
+      "Country": "USA",
+      "Awards": "1 nomination.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BMTkwMTY5ODA1MF5BMl5BanBnXkFtZTcwODYyNzAxMw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "58%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "46/100"
+        }
+      ],
+      "Metascore": "46",
+      "imdbRating": "6.4",
+      "imdbVotes": "110,506",
+      "imdbID": "tt0815236",
+      "Type": "movie",
+      "DVD": "22 Jun 2010",
+      "BoxOffice": "$28,712,974",
+      "Production": "Paramount",
+      "Website": "http://www.hard10movie.com/",
+      "Response": "True",
+      "id": 24
+    },
+    {
+      "Title": "Scream",
+      "Year": "1996",
+      "Rated": "R",
+      "Released": "20 Dec 1996",
+      "Runtime": "111 min",
+      "Genre": "Horror, Mystery",
+      "Director": "Wes Craven",
+      "Writer": "Kevin Williamson",
+      "Actors": "Drew Barrymore, Roger Jackson, Kevin Patrick Walls, David Booth",
+      "Plot": "A year after the murder of her mother, a teenage girl is terrorized by a new killer, who targets the girl and her friends by using horror films as part of a deadly game.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "7 wins & 8 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BMjA2NjU5MTg5OF5BMl5BanBnXkFtZTgwOTkyMzQxMDE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "79%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "65/100"
+        }
+      ],
+      "Metascore": "65",
+      "imdbRating": "7.2",
+      "imdbVotes": "245,219",
+      "imdbID": "tt0117571",
+      "Type": "movie",
+      "DVD": "02 Dec 1997",
+      "BoxOffice": "N/A",
+      "Production": "Miramax Films",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 25
+    },
+    {
+      "Title": "Scream 2",
+      "Year": "1997",
+      "Rated": "R",
+      "Released": "12 Dec 1997",
+      "Runtime": "120 min",
+      "Genre": "Horror, Mystery",
+      "Director": "Wes Craven",
+      "Writer": "Kevin Williamson (characters), Kevin Williamson",
+      "Actors": "Jada Pinkett Smith, Omar Epps, Paulette Patterson, Rasila Schroeder",
+      "Plot": "Two years after the first series of murders, a new psychopath dons the Ghostface costume and a new string of killings begins.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "5 wins & 11 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BMDNlM2E2OTUtZTRhZi00ZDU1LWIxODAtN2E5OGZiNmIwMDIwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.1/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "81%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "63/100"
+        }
+      ],
+      "Metascore": "63",
+      "imdbRating": "6.1",
+      "imdbVotes": "137,183",
+      "imdbID": "tt0120082",
+      "Type": "movie",
+      "DVD": "17 Jul 2001",
+      "BoxOffice": "N/A",
+      "Production": "Miramax Films",
+      "Website": "http://www.dimensionfilms.com/scream2",
+      "Response": "True",
+      "id": 26
+    },
+    {
+      "Title": "Scream 3",
+      "Year": "2000",
+      "Rated": "R",
+      "Released": "04 Feb 2000",
+      "Runtime": "116 min",
+      "Genre": "Horror, Mystery",
+      "Director": "Wes Craven",
+      "Writer": "Kevin Williamson (characters), Ehren Kruger",
+      "Actors": "Liev Schreiber, Beth Toussaint, Roger Jackson, Kelly Rutherford",
+      "Plot": "While Sidney and her friends visit the Hollywood set of Stab 3, the third film based on the Woodsboro murders, a new Ghostface begins to terrorize them once again.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "5 wins & 5 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BZTQ0NGI1MjQtODA1OS00NGFlLWEzN2QtZjk5MjViYTA0YmM5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "5.5/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "36%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "56/100"
+        }
+      ],
+      "Metascore": "56",
+      "imdbRating": "5.5",
+      "imdbVotes": "108,530",
+      "imdbID": "tt0134084",
+      "Type": "movie",
+      "DVD": "04 Jul 2000",
+      "BoxOffice": "N/A",
+      "Production": "Dimension Films",
+      "Website": "http://www.scream3.com",
+      "Response": "True",
+      "id": 27
+    },
+    {
+      "Title": "I Know What You Did Last Summer",
+      "Year": "1997",
+      "Rated": "R",
+      "Released": "17 Oct 1997",
+      "Runtime": "101 min",
+      "Genre": "Horror, Mystery, Thriller",
+      "Director": "Jim Gillespie",
+      "Writer": "Lois Duncan (novel), Kevin Williamson (screenplay)",
+      "Actors": "Jennifer Love Hewitt, Sarah Michelle Gellar, Ryan Phillippe, Freddie Prinze Jr.",
+      "Plot": "Four young friends bound by a tragic accident are reunited when they find themselves being stalked by a hook-wielding maniac in their small seaside town.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "3 wins & 7 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BZDI4ODJlNGUtNjFiMy00ODgzLWIzYjgtMzgyZTljZDQ2NGZiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "5.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "35%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "52/100"
+        }
+      ],
+      "Metascore": "52",
+      "imdbRating": "5.7",
+      "imdbVotes": "116,299",
+      "imdbID": "tt0119345",
+      "Type": "movie",
+      "DVD": "07 Aug 2001",
+      "BoxOffice": "N/A",
+      "Production": "Sony Pictures Home Entertainment",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 28
+    },
+    {
+      "Title": "Tales from the Crypt: Demon Knight",
+      "Year": "1995",
+      "Rated": "R",
+      "Released": "13 Jan 1995",
+      "Runtime": "92 min",
+      "Genre": "Action, Fantasy, Horror",
+      "Director": "Ernest R. Dickerson",
+      "Writer": "Ethan Reiff, Cyrus Voris, Mark Bishop",
+      "Actors": "John Kassir, Billy Zane, William Sadler, Jada Pinkett Smith",
+      "Plot": "A man on the run is hunted by a demon known as the Collector.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "1 nomination.",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNGM3N2VmNDQtNWMwNC00MDI5LThhNzYtNTlkZjkwZTJlNTRjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "38%"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.7",
+      "imdbVotes": "18,178",
+      "imdbID": "tt0114608",
+      "Type": "movie",
+      "DVD": "22 Aug 2006",
+      "BoxOffice": "N/A",
+      "Production": "MCA Universal Home Video",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 29
+    },
+    {
+      "Title": "Once Upon a Time in the West",
+      "Year": "1968",
+      "Rated": "PG-13",
+      "Released": "04 Jul 1969",
+      "Runtime": "164 min",
+      "Genre": "Western",
+      "Director": "Sergio Leone",
+      "Writer": "Sergio Donati (screenplay by), Sergio Leone (screenplay by), Dario Argento (from a story by), Bernardo Bertolucci (from a story by), Sergio Leone (from a story by)",
+      "Actors": "Claudia Cardinale, Henry Fonda, Jason Robards, Charles Bronson",
+      "Plot": "A mysterious stranger with a harmonica joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.",
+      "Language": "Italian, Spanish",
+      "Country": "Italy, USA",
+      "Awards": "4 wins & 5 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BZGI5MjBmYzYtMzJhZi00NGI1LTk3MzItYjBjMzcxM2U3MDdiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.5/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "98%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "80/100"
+        }
+      ],
+      "Metascore": "80",
+      "imdbRating": "8.5",
+      "imdbVotes": "253,764",
+      "imdbID": "tt0064116",
+      "Type": "movie",
+      "DVD": "18 Nov 2003",
+      "BoxOffice": "N/A",
+      "Production": "Paramount Pictures",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 30
+    },
+    {
+      "Title": "The Good, the Bad and the Ugly",
+      "Year": "1966",
+      "Rated": "R",
+      "Released": "29 Dec 1967",
+      "Runtime": "178 min",
+      "Genre": "Western",
+      "Director": "Sergio Leone",
+      "Writer": "Luciano Vincenzoni (story), Sergio Leone (story), Agenore Incrocci (screenplay), Furio Scarpelli (screenplay), Luciano Vincenzoni (screenplay), Sergio Leone (screenplay)",
+      "Actors": "Eli Wallach, Clint Eastwood, Lee Van Cleef, Aldo Giuffrè",
+      "Plot": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+      "Language": "Italian, English",
+      "Country": "Italy, USA, Spain, West Germany",
+      "Awards": "1 win & 3 nominations.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "97%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "90/100"
+        }
+      ],
+      "Metascore": "90",
+      "imdbRating": "8.9",
+      "imdbVotes": "579,651",
+      "imdbID": "tt0060196",
+      "Type": "movie",
+      "DVD": "18 Nov 1997",
+      "BoxOffice": "N/A",
+      "Production": "United Artists",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 31
+    },
+    {
+      "Title": "Blood at Sundown",
+      "Year": "1965",
+      "Rated": "N/A",
+      "Released": "14 Dec 1965",
+      "Runtime": "76 min",
+      "Genre": "Adventure, Western",
+      "Director": "José Antonio de la Loma, Edoardo Mulargia",
+      "Writer": "Gabriel Vincent Davis, Edoardo Mulargia, Vincenzo Musolino (screenplay), Vincenzo Musolino (story), José Antonio de la Loma (dialogue)",
+      "Actors": "Anthony Steffen, Ida Galli, Gemma Cuervo, José Calvo",
+      "Plot": "A young deserter from the army returns to the place where his father has been killed by a family of Mexican landowners. The task is not easy as he is alone in his efforts to avenge his father's death.",
+      "Language": "Spanish",
+      "Country": "Spain, Italy",
+      "Awards": "N/A",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTBlMThmZjgtODk4ZC00NzBhLTk0MWItYzVlNDMyMjViZjgyXkEyXkFqcGdeQXVyNjMzMDgxMzk@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "5.3/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "5.3",
+      "imdbVotes": "59",
+      "imdbID": "tt0059579",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 35
+    },
+    {
+      "Title": "For a Few Dollars More",
+      "Year": "1965",
+      "Rated": "R",
+      "Released": "10 May 1967",
+      "Runtime": "132 min",
+      "Genre": "Western",
+      "Director": "Sergio Leone",
+      "Writer": "Sergio Leone (scenario), Fulvio Morsella (scenario), Luciano Vincenzoni (screenplay), Sergio Leone (screenplay), Luciano Vincenzoni (dialogue: English version)",
+      "Actors": "Clint Eastwood, Lee Van Cleef, Gian Maria Volontè, Mario Brega",
+      "Plot": "Two bounty hunters with the same intentions team up to track down a Western outlaw.",
+      "Language": "Italian, English",
+      "Country": "Italy, Spain, West Germany",
+      "Awards": "1 nomination.",
+      "Poster": "https://ia.media-imdb.com/images/M/MV5BNWM1NmYyM2ItMTFhNy00NDU0LThlYWUtYjQyYTJmOTY0ZmM0XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "94%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "74/100"
+        }
+      ],
+      "Metascore": "74",
+      "imdbRating": "8.3",
+      "imdbVotes": "189,322",
+      "imdbID": "tt0059578",
+      "Type": "movie",
+      "DVD": "28 Jul 1998",
+      "BoxOffice": "N/A",
+      "Production": "MGM Home Entertainment",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 36
     }
   ]
 }

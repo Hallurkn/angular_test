@@ -1,14 +1,15 @@
 import { ApiService } from './../../../shared/services/api.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'home-content-component',
 	templateUrl: './home-content.component.html',
 	styleUrls: ['home-content.component.scss'],
 })
-export class HomeContentComponent {
+export class HomeContentComponent implements OnInit {
 
 	public slideConfigMain: any;
+	public slideConfigSecondary: any;
 	public movies: any;
 
 	public slick1entries = [
@@ -46,7 +47,7 @@ export class HomeContentComponent {
 						slidesToScroll: 2,
 					}
 				},
-			};
+			]};
 
 		this.slideConfigSecondary = {
 			slidesToShow: 8,
@@ -76,10 +77,11 @@ export class HomeContentComponent {
 						slidesToScroll: 2,
 					}
 				},
-			};
+			]};
+	}
 
-
-			this.data.movies.subscribe(movieData => {
+	ngOnInit() {
+		this.data.movies.subscribe(movieData => {
 			this.movies = movieData;
 			this.filterMovies(this.slick1entries, this.slick1movies);
 		});
@@ -87,8 +89,8 @@ export class HomeContentComponent {
 
 	filterMovies(imdbIDs, slickMovies) {
 		for (let i = 0; i < imdbIDs.length; i++) {
-			for(let j = 0; j < this.movies.length; j++) {
-				if(imdbIDs[i] === this.movies[j].imdbID) {
+			for (let j = 0; j < this.movies.length; j++) {
+				if (imdbIDs[i] === this.movies[j].imdbID) {
 					slickMovies.push(this.movies[j]);
 					continue;
 				}

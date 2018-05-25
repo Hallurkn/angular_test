@@ -1,5 +1,5 @@
 import { MovieFilterService } from '_shared/services/';
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 import * as _ from 'lodash';
 
@@ -8,12 +8,11 @@ import * as _ from 'lodash';
 	templateUrl: './find-movie-filters.component.html',
 	styleUrls: ['find-movie-filters.component.scss'],
 })
-export class FindMoviesFiltersComponent {
+export class FindMoviesFiltersComponent implements OnInit {
 
 	public showFilters = true;
-	public searchFilter: string = '';
+	public searchFilter = '';
 
-	public staticMovies: any;
 	public filteredMovies: any;
 
 	public sortLetterAsc = true;
@@ -27,19 +26,14 @@ export class FindMoviesFiltersComponent {
 
 	@Output() filterEvent = new EventEmitter<string>();
 
-	constructor(private data: MovieFilterService) {
-		this.data.filteredMovies.subscribe(movieData => {
+	constructor(private filterService: MovieFilterService) {}
+
+	ngOnInit(): void {
+		this.filterService.filteredMovies.subscribe(movieData => {
 			this.filteredMovies = movieData;
-		});
-		// Get static movies in order to make sure the select property
-		// remains static and to have an object to reset to
-		this.data.staticMovies.subscribe(movieData => {
-			this.staticMovies = movieData;
 			this.getCountriesOption();
 			this.getGenresOption();
 		});
-
-		// Reset filter in case someone leaves page and comes back
 		this.filterMovies();
 	}
 
@@ -61,7 +55,7 @@ export class FindMoviesFiltersComponent {
 
 	// Function that talks to service and updates global data
 	updateFilteredMovies(movies) {
-		this.data.updateFilteredMovies(movies);
+		this.filterService.updateFilteredMovies(movies);
 	}
 
 	// Generates the genres to list in select option
@@ -81,7 +75,7 @@ export class FindMoviesFiltersComponent {
 	// Filters movies by both parameters
 	filterMovies() {
 		// Resets filteredMovies to all staticMovies
-		this.filteredMovies = this.staticMovies;
+		// this.filteredMovies = this.staticMovies;
 		if (this.curCountryFilter) {
 			this.filteredMovies = this.filteredMovies.filter(
 				movie => movie.Country.toLowerCase().indexOf(this.curCountryFilter.toLowerCase()) > -1

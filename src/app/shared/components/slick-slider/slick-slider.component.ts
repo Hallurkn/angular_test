@@ -8,7 +8,6 @@ import { Component, Input } from '@angular/core';
 export class SlickSliderComponent {
 	@Input() movies: any;
 	@Input() slideConfig: any;
-	@Input() message: string;
 
 	constructor() {}
 }

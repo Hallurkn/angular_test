@@ -1,7 +1,16 @@
-<div class="container">
-	<slick-slider-component message="Nye film" [movies]="slick1movies" [slideConfig]="slideConfigMain"></slick-slider-component>
+<div class="home-content">
+	<div class="container">
+		<div class="row">
+			<div class="carousel-slider col">
+				<div>
+					<h3>Nye Films</h3>
+				</div>
+				<slick-slider-component [movies]="slick1movies" [slideConfig]="slideConfigMain"></slick-slider-component>
 
-	<slick-slider-component message="Nye film" [movies]="slick1movies" [slideConfig]="slideConfigSecondary"></slick-slider-component>
-
-	<slick-slider-component message="Nye film" [movies]="slick1movies" [slideConfig]="slideConfigSecondary"></slick-slider-component>	
+				<div class="my-3">
+					<a class="btn bg-primary" [routerLink]="['/', 'movies']">Se Flere</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

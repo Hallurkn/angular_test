@@ -24,6 +24,7 @@ export class MovieFormComponent {
 						if (!data) {
 							this.api.addMovie(this.movie).subscribe();
 							this.statusMessage = 'Movie successfully added to the database.';
+							this.id = '';
 						} else {
 							this.statusMessage = 'The Movie you added is already part of your database.';
 						}
@@ -34,18 +35,17 @@ export class MovieFormComponent {
 			});
 	}
 
-	deleteMovie(movieId: string) {
-		if (this.movie) {
-			this.api.getMovieByIMDBId(this.movie.imdbID).subscribe(data => {
-				// Check if movie with same id is present in the db, if not add to db
-				if (data) {
-					this.api.deleteMovieById(data.id).subscribe();
-					this.statusMessage = 'Movie successfully removed from the database.';
-				} else {
-					this.statusMessage = 'No movie with this id was found in your database.';
-				}
-			});
-		}
+	deleteMovie(imdbID: string) {
+		this.api.getMovieByIMDBId(imdbID).subscribe(data => {
+			// Check if movie with same id is present in the db, if not add to db
+			if (data) {
+				this.api.deleteMovieById(data.id).subscribe();
+				this.statusMessage = 'Movie successfully removed from the database.';
+				this.id = '';
+			} else {
+				this.statusMessage = 'No movie with this id was found in your database.';
+			}
+		});
 	}
 
 	onSubmit(form): void {

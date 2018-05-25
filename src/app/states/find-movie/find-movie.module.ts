@@ -11,7 +11,7 @@ import { FindMovieComponent } from './find-movie.component';
 import { FindMovieContentComponent } from './find-movie-content/find-movie-content.component';
 
 // services
-import { ApiService, OMDBService, MovieFilterService } from '_shared/services/';
+import { ApiService, MovieFilterService } from '_shared/services/';
 
 // routes
 export const ROUTES: Routes = [
@@ -37,7 +37,6 @@ export const ROUTES: Routes = [
 	],
 	providers: [
 		ApiService,
-		OMDBService,
 		MovieFilterService
 	],
 	declarations: [

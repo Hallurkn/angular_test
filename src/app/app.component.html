@@ -1,8 +1,12 @@
 <header-component></header-component>
-<div [hidden]="!loading" class="loader container" >
-	<h2>Loading...</h2>
+<div class="container px-0 px-sm-3">
+	<div class="bg-white page-wrapper">
+		<div [hidden]="!loading" class="loader container">
+			<h2>Loading...</h2>
+		</div>
+		<div [hidden]="loading" class="router-output">
+			<router-outlet></router-outlet>
+		</div>
+		<footer-component></footer-component>
+	</div>
 </div>
-<div [hidden]="loading" class="router-output">
-	<router-outlet></router-outlet>
-</div>
-<footer-component></footer-component>

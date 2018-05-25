@@ -14,6 +14,7 @@ const API_URL = 'http://localhost:3004';
 export class ApiService {
 
 	public movies: any;
+	public storedMovies;
 
 	// Constructor / dependencies
 	constructor(private http: Http) {
@@ -27,19 +28,28 @@ export class ApiService {
 	}
 
 	public getAllMovies(): Observable<any[]> {
-		const localData = JSON.parse(localStorage.getItem('movies'));
-		if (localData) {
-			return Observable.of(localData);
-		} else {
-			return this.http
-			.get(API_URL + '/movies')
-			.map(response => {
-				const movies = response.json();
-				localStorage.setItem('movies', JSON.stringify(movies));
-				return movies;
-			})
-			.catch(this.handleError);
-		}
+		return new Observable(observer => {
+			// const localData = JSON.parse(localStorage.getItem('movies'));
+			// if (localData) {
+			// 	console.log('localData');
+			// 	observer.next(localData);
+			// 	return observer.complete();
+			// } else
+			if (this.storedMovies) {
+				observer.next(this.storedMovies);
+				return observer.complete();
+			}
+			this.http
+				.get(API_URL + '/movies')
+				.map((response: Response) => (response.json() as Array<any>))
+				.catch(this.handleError)
+				.subscribe((movies: Array<any>) => {
+					localStorage.setItem('movies', JSON.stringify(movies));
+					this.storedMovies = movies;
+					observer.next(this.storedMovies);
+					observer.complete();
+				});
+		});
 	}
 
 	// API: POST /todos
