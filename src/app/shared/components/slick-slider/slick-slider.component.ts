@@ -10,6 +10,5 @@ export class SlickSliderComponent {
 	@Input() slideConfig: any;
 	@Input() message: string;
 
-
 	constructor() {}
 }

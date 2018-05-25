@@ -1,6 +1,6 @@
 <div class="row" lazy-load-images>
-	<div class="col-xl-3 col-lg-4 col-sm-6 col-12" *ngFor="let movie of filteredMovies | filter:searchFilter ">
-		<div class="movie mb-4" [attr.data-background-src]="movie.Poster">
+	<div class="col-xl-3 col-lg-4 col-sm-6 col-12 p-0" *ngFor="let movie of filteredMovies | filter:searchFilter ">
+		<div class="movie" [attr.data-background-src]="movie.Poster">
 			<a [routerLink]="['/details', movie.id]">
 				<div class="hover-content d-flex flex-column justify-content-between text-white p-2 text-uppercase h-100 text-center">
 					<div>

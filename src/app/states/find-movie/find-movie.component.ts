@@ -11,6 +11,8 @@ export class FindMovieComponent {
 
 	constructor() {}
 
+	// Receives the search filter event from filter component
+	// which then updates the find movie content component data
 	receiveSearchFilter($event) {
 		this.searchFilter = $event;
 	}

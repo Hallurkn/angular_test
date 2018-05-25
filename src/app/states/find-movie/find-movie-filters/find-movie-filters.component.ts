@@ -10,7 +10,7 @@ import * as _ from 'lodash';
 })
 export class FindMoviesFiltersComponent {
 
-	public fullMovieList: any;
+	public staticMovies: any;
 	public filteredMovies: any;
 
 	public sortLetterAsc = true;
@@ -27,12 +27,20 @@ export class FindMoviesFiltersComponent {
 	constructor(private data: MovieFilterService) {
 		this.data.filteredMovies.subscribe(movieData => {
 			this.filteredMovies = movieData;
-			this.fullMovieList = movieData;
+		});
+		// Get static movies in order to make sure the select property
+		// remains static and to have an object to reset to
+		this.data.staticMovies.subscribe(movieData => {
+			this.staticMovies = movieData;
 			this.getCountriesOption();
 			this.getGenresOption();
 		});
+
+		// Reset filter in case someone leaves page and comes back
+		this.filterMovies();
 	}
 
+	// Emit the search filter to parent
 	updateSearchFilter(searchValue: string) {
 		this.filterEvent.emit(searchValue);
 	}
@@ -42,48 +50,50 @@ export class FindMoviesFiltersComponent {
 		this.data.updateFilteredMovies(movies);
 	}
 
+	// Generates the genres to list in select option
 	getGenresOption() {
 		this.genresOption = _.uniqBy(this.filteredMovies, function (e: any) {
 			return e.Genre;
 		});
 	}
 
+	// Generates the countries to list in select option
 	getCountriesOption() {
 		this.countriesOption = _.uniqBy(this.filteredMovies, function (e: any) {
 			return e.Country;
 		});
 	}
 
-	// assignCopy(movies) {
-	// 	this.filteredMovies = Object.assign([], this.items);
-	// }
-
+	// Filters movies by both parameters
 	filterMovies() {
-		// this.assignCopy(this.filteredMovies);
+		// Resets filteredMovies to all staticMovies
+		this.filteredMovies = this.staticMovies;
 		if (this.curCountryFilter) {
-			this.filteredMovies = Object.assign([], this.fullMovieList).filter(
+			this.filteredMovies = this.filteredMovies.filter(
 				movie => movie.Country.toLowerCase().indexOf(this.curCountryFilter.toLowerCase()) > -1
 			);
 		}
 		if (this.curGenreFilter) {
-			this.filteredMovies = Object.assign([], this.fullMovieList).filter(
+			this.filteredMovies = this.filteredMovies.filter(
 				movie => movie.Genre.toLowerCase().indexOf(this.curGenreFilter.toLowerCase()) > -1
 			);
 		}
 		this.updateFilteredMovies(this.filteredMovies);
 	}
 
+	// Filters by country, gets new value and calls filter movies
 	filterByCountry(value) {
 		this.curCountryFilter = value;
 		this.filterMovies();
-
 	}
 
+	// Filters by genre, gets new value and calls filter movies
 	filterByGenre(value) {
 		this.curGenreFilter = value;
 		this.filterMovies();
 	}
 
+	// Sorts all filtered movies by letter
 	sortByLetter() {
 		this.sortYearAsc = true;
 		if (this.sortLetterAsc) {
@@ -100,6 +110,7 @@ export class FindMoviesFiltersComponent {
 		this.updateFilteredMovies(this.filteredMovies);
 	}
 
+	// Sorts all filtered movies by year
 	sortByYear() {
 		this.sortLetterAsc = true;
 		if (this.sortYearAsc) {

@@ -1,11 +1,13 @@
 <div class="container">
 	<div class="row my-5">
-		<div class="col-12 col-md-4 search-col">
+		<div class="col-12 col-md-3 col-xl-2">
 			<find-movie-filters-component (filterEvent)="receiveSearchFilter($event)"></find-movie-filters-component>
 		</div>
 
 		<div class="col">
-			<find-movie-content-component [(searchFilter)]="searchFilter"></find-movie-content-component>
+			<div class="px-3">
+				<find-movie-content-component [(searchFilter)]="searchFilter"></find-movie-content-component>
+			</div>
 		</div>
 	</div>
 </div>
