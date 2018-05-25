@@ -1,8 +1,7 @@
-<div class="card col col-md-6 offset-md-3 bg-faded">
+<div class="card card-body col col-md-6 offset-md-3 bg-faded">
 	<div class="card-block">
 		<form #movieForm="ngForm" (ngSubmit)="onSubmit(movieForm)">
 			<div class="form-group">
-				<label for="id">Imdb ID</label>
 				<input class="form-control" type="text" name="id" id="id" [(ngModel)]="id" #idCheck="ngModel" placeholder="ex. tt3774694"
 				required>
 				<div class="alert alert-info" [hidden]="!this.statusMessage || idCheck.pristine">{{this.statusMessage}}</div>
