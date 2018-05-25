@@ -1,19 +1,49 @@
 <div class="my-5" *ngIf="movie">
-	<h1 class="text-center">{{movie.Title}}</h1>
+	<div class="title">
+		<h1 class="text-center">{{movie.Title}}</h1>
+	</div>
 
-	<div>Vimeo video</div>
+	<div class="vimeo-video">
+		<vimeo-embed-component [vimeoIframe]="vimeoIframe"></vimeo-embed-component>
+	</div>
 
-	<p>Genre: {{movie.Genre}}</p>
-	<p>Runtime: {{movie.Runtime}}</p>
-	<p>Language: {{movie.Language}}</p>
-	<p>Subtitles: {{movie.Subtitles}}</p>
+	<div class="content my-4">
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-9">
+				<div class="info small">
+					<span>Genre:
+						<strong>{{movie.Genre}}</strong>
+					</span>
+					<span>Runtime:
+						<strong>{{movie.Runtime}}</strong>
+					</span>
+					<span>Language:
+						<strong>{{movie.Language}}</strong>
+					</span>
+				</div>
 
-	<p>{{movie.Plot}}</p>
+				<div class="description my-3">
+					<p class="m-0">{{movie.Plot}}</p>
+				</div>
 
-	<img src="{{movie.Poster}}" alt="{{movie.Title}}">
-
-	<p>Director: {{movie.Director}}</p>
-	<p>Actors: {{movie.Actors}}</p>
-	<p>Country: {{movie.Country}}</p>
-	<p>Year {{movie.Year}}</p>
+				<div class="info small">
+					<span>Director:
+						<strong>{{movie.Director}}</strong>
+					</span>
+					<span>Actors:
+						<strong>{{movie.Actors}}</strong>
+					</span>
+					<span>Country:
+						<strong>{{movie.Country}}</strong>
+					</span>
+					<span>Year:
+						<strong>{{movie.Year}}</strong>
+					</span>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 col-lg-3">
+				<img src="{{movie.Poster}}" alt="{{movie.Title}}">
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,17 +1,15 @@
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
 	z-index: 1;
 	&:before {
 		color: $primary !important;
 	}
 }
 
-
-
-
 .nav-link {
-    &:hover {
-        color: $dropdown-link-hover-color !important;
-    }
+	&:hover {
+		color: $dropdown-link-hover-color !important;
+	}
 }
 
 .btn {
@@ -21,15 +19,6 @@
 	font-weight: bold !important;
 }
 
-// body {
-// 	display: block;
-//     z-index: -10;
-//     background-image: url(https://static1.squarespace.com/static/57876fe9c534a55abe8ba9e0/t/578e2f3c46c3c4b36c548f62/1468935996855/background3.jpg) !important;
-//     background-repeat: no-repeat !important;
-//     background-attachment: fixed;
-//     background-position: top center;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-// }
+body {
+	padding-top: 77.5px;
+}

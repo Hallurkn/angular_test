@@ -8,6 +8,7 @@ import { MovieDetailsContentComponent } from './movie-details-content/movie-deta
 
 // services
 import { ApiService } from '_shared/services/';
+import { VimeoEmbedComponent } from '_shared/components';
 
 // routes
 export const ROUTES: Routes = [
@@ -33,7 +34,8 @@ export const ROUTES: Routes = [
 	],
 	declarations: [
 		MovieDetailsComponent,
-		MovieDetailsContentComponent
+		MovieDetailsContentComponent,
+		VimeoEmbedComponent
 	]
 })
 export class MovieDetailsModule { }

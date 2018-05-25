@@ -1,0 +1,38 @@
+.movie {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 350px;
+	transition: all 250ms ease-in-out;
+	overflow: hidden;
+	position: relative;
+	a {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+	&:hover {
+		.hover-content {
+			transform: scale(1.0);
+			opacity: 1;
+		}
+	}
+	.hover-content {
+		transform: scale(0.5);
+		opacity: 0;
+		transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+		background: rgba(0, 0, 0, 0.6);
+		.title {
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		.runtime,
+		.rating,
+		.genres {
+			font-size: 0.8rem;
+		}
+	}
+	a:hover {
+		text-decoration: none !important;
+	}
+}
