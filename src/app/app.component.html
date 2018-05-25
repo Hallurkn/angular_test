@@ -1,12 +1,14 @@
 <header-component></header-component>
-<div class="container px-0 px-sm-3">
-	<div class="bg-white page-wrapper">
+<div class="container px-0 px-sm-3 h-100">
+	<div class="bg-white page-wrapper d-flex flex-column">
 		<div [hidden]="!loading" class="loader container">
 			<h2>Loading...</h2>
 		</div>
 		<div [hidden]="loading" class="router-output">
 			<router-outlet></router-outlet>
 		</div>
-		<footer-component></footer-component>
+		<div class="mt-auto">
+			<footer-component></footer-component>
+		</div>
 	</div>
 </div>
