@@ -13,8 +13,7 @@ export class HomeContentComponent implements OnInit {
 	public movies: any;
 
 	public slick1entries = [
-		'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753',
-		'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592', 'tt1013753', 'tt3774694', 'tt1155592'
+		'tt1155592', 'tt1013753', 'tt0059579', 'tt0060196', 'tt0064116', 'tt0114608', 'tt0119345', 'tt0134084'
 	];
 	public slick1movies = [];
 
@@ -24,6 +23,7 @@ export class HomeContentComponent implements OnInit {
 			slidesToScroll: 4,
 			arrows: true,
 			infinite: true,
+			adaptiveHeight: false,
 			responsive: [
 				{
 					breakpoint: 748,
@@ -50,8 +50,8 @@ export class HomeContentComponent implements OnInit {
 			]};
 
 		this.slideConfigSecondary = {
-			slidesToShow: 8,
-			slidesToScroll: 8,
+			slidesToShow: 6,
+			slidesToScroll: 6,
 			arrows: true,
 			infinite: true,
 			responsive: [
@@ -80,7 +80,7 @@ export class HomeContentComponent implements OnInit {
 			]};
 	}
 
-	ngOnInit() {
+	ngOnInit(): void {
 		this.data.movies.subscribe(movieData => {
 			this.movies = movieData;
 			this.filterMovies(this.slick1entries, this.slick1movies);

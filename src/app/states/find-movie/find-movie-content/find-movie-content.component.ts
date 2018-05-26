@@ -1,5 +1,5 @@
 import { MovieFilterService } from '_shared/services/';
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
 	selector: 'find-movie-content-component',
@@ -14,14 +14,9 @@ export class FindMovieContentComponent implements OnInit {
 
 	constructor(private filterService: MovieFilterService) { }
 
-	ngOnInit() {
+	ngOnInit(): void {
 		this.filterService.filteredMovies.subscribe(movieData => {
 			this.filteredMovies = movieData;
 		});
 	}
-
-	@HostListener('window:scroll', [])
-		onWindowScroll() {
-			console.log('scrolling');
-		}
-	}
+}

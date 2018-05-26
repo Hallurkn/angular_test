@@ -1,9 +1,14 @@
-<nav class="navbar navbar-expand-sm bg-primary text-uppercase py-3 px-sm-0">
-	<div class="container">
+<nav class="navbar navbar-expand-md bg-primary text-uppercase">
+	<div class="container px-sm-3">
 		<a class="navbar-brand" [routerLink]="['/']">
 			<img src="./assets/filmperler_logo.png" alt="Filmperler Logo" width="200">
 		</a>
-		<div class="collapse navbar-collapse">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+		aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="navbar-nav ml-auto">
 				<li routerLinkActive="active" class="nav-item">
 					<a class="nav-link" [routerLink]="['/', 'movies']">Find Film</a>

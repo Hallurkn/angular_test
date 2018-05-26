@@ -1,10 +1,11 @@
 @charset 'UTF-8';
 @import 'bootstrap/scss/functions';
-
 @import 'filmperler-theme/variables';
+@import 'bootstrap/scss/bootstrap';
+
 @import 'filmperler-theme/overrides';
+@import 'filmperler-theme/hero-component';
 @import 'filmperler-theme/embed-container';
 @import 'filmperler-theme/movie';
 @import 'filmperler-theme/type';
 
-@import 'bootstrap/scss/bootstrap';
