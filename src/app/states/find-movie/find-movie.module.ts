@@ -9,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 // containers
 import { FindMovieComponent } from './find-movie.component';
 import { FindMovieContentComponent } from './find-movie-content/find-movie-content.component';
+import { LoaderComponent } from '_shared/components/loader/loader.component';
 
 // services
 import { ApiService, MovieFilterService } from '_shared/services/';
@@ -42,7 +43,8 @@ export const ROUTES: Routes = [
 	declarations: [
 		FindMovieComponent,
 		FindMovieContentComponent,
-		FindMoviesFiltersComponent
+		FindMoviesFiltersComponent,
+		LoaderComponent
 	]
 })
 export class FindMovieModule { }

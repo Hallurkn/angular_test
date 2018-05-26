@@ -1,3 +1,4 @@
+import { ApiService } from '_shared/services/api.service';
 import { MovieFilterService } from '_shared/services/';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -12,7 +13,7 @@ export class FindMovieContentComponent implements OnInit {
 	@Input() searchFilter: string;
 	public filteredMovies: any;
 
-	constructor(private filterService: MovieFilterService) { }
+	constructor(private filterService: MovieFilterService, private api: ApiService) { }
 
 	ngOnInit(): void {
 		this.filterService.filteredMovies.subscribe(movieData => {

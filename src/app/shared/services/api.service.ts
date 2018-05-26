@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -15,6 +14,7 @@ export class ApiService {
 
 	public movies: any;
 	public storedMovies;
+	public showSpinner = false;
 
 	// Constructor / dependencies
 	constructor(private http: Http) {
@@ -27,7 +27,16 @@ export class ApiService {
 		return Observable.throw(error);
 	}
 
+	public showLoadingSpinner() {
+		this.showSpinner = true;
+	}
+
+	public hideLoadingSpinner() {
+		this.showSpinner = false;
+	}
+
 	public getAllMovies(): Observable<any[]> {
+		this.showLoadingSpinner();
 		return new Observable(observer => {
 			// const localData = JSON.parse(localStorage.getItem('movies'));
 			// if (localData) {
@@ -48,6 +57,7 @@ export class ApiService {
 					this.storedMovies = movies;
 					observer.next(this.storedMovies);
 					observer.complete();
+					this.hideLoadingSpinner();
 				});
 		});
 	}
@@ -64,10 +74,12 @@ export class ApiService {
 
 	// API: GET /todos/:id
 	public getMovieById(movieId: number): Observable<any> {
+		this.showLoadingSpinner();
 		return this.http
 			.get(API_URL + '/movies/' + movieId)
 			.map(response => {
 				const movie = response.json();
+				this.hideLoadingSpinner();
 				return movie;
 			})
 			.catch(this.handleError);

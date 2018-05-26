@@ -14,6 +14,7 @@ export class FindMoviesFiltersComponent implements OnInit {
 	public searchFilter = '';
 
 	public filteredMovies: any;
+	public staticMovies: any;
 
 	public sortLetterAsc = true;
 	public sortYearAsc = true;
@@ -31,12 +32,16 @@ export class FindMoviesFiltersComponent implements OnInit {
 	ngOnInit(): void {
 		this.filterService.filteredMovies.subscribe(movieData => {
 			this.filteredMovies = movieData;
+		});
+		this.filterService.staticMovies.subscribe(movieData => {
+			this.staticMovies = movieData;
 			this.getCountriesOption();
 			this.getGenresOption();
 		});
 		this.filterMovies();
 	}
 
+	// Resets the filter and filters again
 	resetFilter() {
 		this.curCountryFilter = '';
 		this.curGenreFilter = '';
@@ -44,6 +49,7 @@ export class FindMoviesFiltersComponent implements OnInit {
 		this.filterMovies();
 	}
 
+	// optional toggle filter component, delete?
 	toggleFilterComponent() {
 		this.showFilters = !this.showFilters;
 	}
@@ -60,14 +66,14 @@ export class FindMoviesFiltersComponent implements OnInit {
 
 	// Generates the genres to list in select option
 	getGenresOption() {
-		this.genresOption = _.uniqBy(this.filteredMovies, function (e: any) {
+		this.genresOption = _.uniqBy(this.staticMovies, function (e: any) {
 			return e.Genre;
 		});
 	}
 
 	// Generates the countries to list in select option
 	getCountriesOption() {
-		this.countriesOption = _.uniqBy(this.filteredMovies, function (e: any) {
+		this.countriesOption = _.uniqBy(this.staticMovies, function (e: any) {
 			return e.Country;
 		});
 	}
@@ -75,7 +81,7 @@ export class FindMoviesFiltersComponent implements OnInit {
 	// Filters movies by both parameters
 	filterMovies() {
 		// Resets filteredMovies to all staticMovies
-		// this.filteredMovies = this.staticMovies;
+		this.filteredMovies = this.staticMovies;
 		if (this.curCountryFilter) {
 			this.filteredMovies = this.filteredMovies.filter(
 				movie => movie.Country.toLowerCase().indexOf(this.curCountryFilter.toLowerCase()) > -1

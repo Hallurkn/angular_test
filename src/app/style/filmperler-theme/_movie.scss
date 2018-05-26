@@ -32,7 +32,7 @@
 	.hover-content {
 		padding: map-get($spacers, 2);
 		position: relative;
-		z-index: 3;
+		z-index: 2;
 		transform: scale(0.5);
 		opacity: 0;
 		transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
@@ -57,6 +57,7 @@
 
 			.info {
 				.rating {
+					font-weight: bold;
 					font-size: ($font-size-lg * 0.9);
 					display: block;
 				}

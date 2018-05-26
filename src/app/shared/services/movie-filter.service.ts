@@ -7,10 +7,13 @@ export class MovieFilterService {
 
 	private filteredMoviesSource = new BehaviorSubject([]);
 	public filteredMovies = this.filteredMoviesSource.asObservable();
+	public staticMoviesSource = new BehaviorSubject([]);
+	public staticMovies = this.staticMoviesSource.asObservable();
 
 	constructor(private data: ApiService) {
 		this.data.movies.subscribe(movieData => {
 			this.filteredMoviesSource.next(movieData);
+			this.staticMoviesSource.next(movieData);
 		});
 	}
 
