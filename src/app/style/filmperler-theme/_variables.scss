@@ -34,10 +34,12 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #007bff !default;
 $fp-red: 	#6e2413 !default;
 $fp-red2: #772816 !default;
 $fp-text: #414e58	!default;
+$dark-blue: #102542 !default;
+
+$blue:    #102542 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -50,7 +52,7 @@ $cyan:    #17a2b8 !default;
 
 $colors: () !default;
 $colors: map-merge((
-  "blue":       $blue,
+  "dark-blue":  $dark-blue,
   "indigo":     $indigo,
   "purple":     $purple,
   "pink":       $pink,
@@ -77,7 +79,8 @@ $dark:          $gray-800 !default;
 $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary":    $primary,
-  "secondary":  $secondary,
+	"secondary":  $secondary,
+  "dark-blue":  $dark-blue,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -237,7 +240,7 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Montserrat", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      "Montserrat", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -385,9 +388,9 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
-$btn-border-radius-lg:        $border-radius-lg !default;
-$btn-border-radius-sm:        $border-radius-sm !default;
+$btn-border-radius:           0 !default;
+$btn-border-radius-lg:        0 !default;
+$btn-border-radius-sm:        0 !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 

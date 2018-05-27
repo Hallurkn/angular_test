@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Movie } from '_shared';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -12,8 +13,8 @@ const API_URL = 'http://localhost:3004';
 @Injectable()
 export class ApiService {
 
-	public movies: any;
-	public storedMovies;
+	public movies: Observable<Movie[]>;
+	public storedMovies: Movie[];
 	public showSpinner = false;
 
 	// Constructor / dependencies
@@ -35,7 +36,7 @@ export class ApiService {
 		this.showSpinner = false;
 	}
 
-	public getAllMovies(): Observable<any[]> {
+	public getAllMovies(): Observable<Movie[]> {
 		this.showLoadingSpinner();
 		return new Observable(observer => {
 			// const localData = JSON.parse(localStorage.getItem('movies'));
@@ -50,9 +51,9 @@ export class ApiService {
 			}
 			this.http
 				.get(API_URL + '/movies')
-				.map((response: Response) => (response.json() as Array<any>))
+				.map((response: Response) => (response.json() as Array<Movie>))
 				.catch(this.handleError)
-				.subscribe((movies: Array<any>) => {
+				.subscribe((movies: Array<Movie>) => {
 					localStorage.setItem('movies', JSON.stringify(movies));
 					this.storedMovies = movies;
 					observer.next(this.storedMovies);
@@ -63,7 +64,7 @@ export class ApiService {
 	}
 
 	// API: POST /todos
-	public addMovie(movie: any[]): Observable<any> {
+	public addMovie(movie: Movie): Observable<Movie> {
 		return this.http
 			.post(API_URL + '/movies', movie)
 			.map(response => {
@@ -73,7 +74,7 @@ export class ApiService {
 	}
 
 	// API: GET /todos/:id
-	public getMovieById(movieId: number): Observable<any> {
+	public getMovieById(movieId: number): Observable<Movie> {
 		this.showLoadingSpinner();
 		return this.http
 			.get(API_URL + '/movies/' + movieId)
@@ -93,7 +94,7 @@ export class ApiService {
 			.catch(this.handleError);
 	}
 
-	public getMovieByIMDBId(imdbID: any): Observable<any> {
+	public getMovieByIMDBId(imdbID: any): Observable<Movie> {
 		return this.http
 			.get(API_URL + '/movies')
 			.map(response => {

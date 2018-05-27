@@ -1,5 +1,6 @@
 import { MovieFilterService } from '_shared/services/';
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Movie } from '_shared';
 
 import * as _ from 'lodash';
 
@@ -13,8 +14,8 @@ export class FindMoviesFiltersComponent implements OnInit {
 	public showFilters = true;
 	public searchFilter = '';
 
-	public filteredMovies: any;
-	public staticMovies: any;
+	public filteredMovies: Movie[];
+	public staticMovies: Movie[];
 
 	public sortLetterAsc = true;
 	public sortYearAsc = true;
@@ -27,7 +28,7 @@ export class FindMoviesFiltersComponent implements OnInit {
 
 	@Output() filterEvent = new EventEmitter<string>();
 
-	constructor(private filterService: MovieFilterService) {}
+	constructor(private filterService: MovieFilterService) { }
 
 	ngOnInit(): void {
 		this.filterService.filteredMovies.subscribe(movieData => {
@@ -66,16 +67,18 @@ export class FindMoviesFiltersComponent implements OnInit {
 
 	// Generates the genres to list in select option
 	getGenresOption() {
-		this.genresOption = _.uniqBy(this.staticMovies, function (e: any) {
+		this.genresOption = _.uniqBy(this.staticMovies, function (e: Movie) {
 			return e.Genre;
 		});
+		this.genresOption = _.orderBy(this.genresOption, ['Genre'], ['asc']);
 	}
 
 	// Generates the countries to list in select option
 	getCountriesOption() {
-		this.countriesOption = _.uniqBy(this.staticMovies, function (e: any) {
+		this.countriesOption = _.uniqBy(this.staticMovies, function (e: Movie) {
 			return e.Country;
 		});
+		this.countriesOption = _.orderBy(this.countriesOption, ['Country'], ['asc']);
 	}
 
 	// Filters movies by both parameters
@@ -112,12 +115,12 @@ export class FindMoviesFiltersComponent implements OnInit {
 		this.sortYearAsc = true;
 		if (this.sortLetterAsc) {
 			this.sortLetterAsc = !this.sortLetterAsc;
-			this.filteredMovies.sort((a: any, b: any) => {
+			this.filteredMovies.sort((a: Movie, b: Movie) => {
 				return (a.Title < b.Title ? -1 : (a.Title > b.Title ? 1 : 0));
 			});
 		} else {
 			this.sortLetterAsc = !this.sortLetterAsc;
-			this.filteredMovies.sort((a: any, b: any) => {
+			this.filteredMovies.sort((a: Movie, b: Movie) => {
 				return (a.Title < b.Title ? 1 : (a.Title > b.Title ? -1 : 0));
 			});
 		}

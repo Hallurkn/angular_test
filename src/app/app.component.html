@@ -1,8 +1,9 @@
 <header-component></header-component>
 <div class="container px-0 px-sm-3 h-100">
 	<div class="bg-white page-wrapper d-flex flex-column">
-		<div [hidden]="!loading" class="loader container">
-			<h2>Loading...</h2>
+		<div [hidden]="!loading" class="container">
+			<h1>stuff stuff</h1>
+			<!-- <loader-component [showSpinner]="loading"></loader-component> -->
 		</div>
 		<div [hidden]="loading" class="router-output">
 			<router-outlet></router-outlet>

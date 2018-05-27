@@ -22,7 +22,9 @@ import {
 	AboutContentComponent,
 	HomeComponent,
 	HomeContentComponent,
-	HeroComponent
+	HeroComponent,
+	NewsletterComponent,
+	SellingPointsComponent
 } from '_states';
 
 import {
@@ -57,6 +59,8 @@ import {
 		HomeComponent,
 		HomeContentComponent,
 		HeroComponent,
+		NewsletterComponent,
+		SellingPointsComponent,
 		SlickSliderComponent,
 		AboutComponent,
 		AboutContentComponent,

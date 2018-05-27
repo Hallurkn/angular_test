@@ -7,6 +7,7 @@ import {
 	HomeContentComponent,
 	AboutComponent,
 	AboutContentComponent,
+	NewsletterComponent,
 	NotFoundComponent,
 } from '_states';
 
@@ -51,11 +52,12 @@ export const ROUTES = [
 
 @NgModule({
 	imports: [
-		RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
+		RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
 	],
 	providers: [HomeComponent],
 	exports: [RouterModule],
 	entryComponents: [
+		NewsletterComponent,
 		HeroComponent,
 		HomeComponent,
 		HomeContentComponent,

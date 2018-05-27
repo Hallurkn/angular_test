@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailsContentComponent implements OnInit {
 
-	private movie: any;
+	public movie: any;
 	public vimeoIframe = `<iframe src='https://player.vimeo.com/video/66140585'
 	 frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>`;
 

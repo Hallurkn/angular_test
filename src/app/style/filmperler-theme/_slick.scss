@@ -1,0 +1,51 @@
+.slick-prev,
+.slick-next {
+	z-index: 1;
+	&:before {
+		color: $primary !important;
+	}
+	&:after {
+		content: '';
+		height: 125%;
+		width: 125%;
+		left: 50%;
+		position: absolute;
+		background: white;
+		transform: translate(-50%, -50%);
+		top: 45%;
+		z-index: -1;
+		border-radius: 49%;
+		box-shadow: 0 0 20px -5px #7d7d7d;
+	}
+}
+
+.slick-next {
+	right: 10px;
+}
+
+.slick-prev {
+	left: 10px;
+}
+
+.slick-initialized .slick-slide {
+	display: flex;
+	max-height: 150px;
+	@include media-breakpoint-up(md) {
+		max-height: 250px;
+	}
+	img {
+		object-fit: cover;
+	}
+}
+
+.big-slider {
+	.slick-initialized .slick-slide {
+		max-height: 250px;
+		@include media-breakpoint-up(md) {
+			max-height: 350px;
+		}
+		@include media-breakpoint-up(lg) {
+			max-height: 375px;
+		}
+	}
+}

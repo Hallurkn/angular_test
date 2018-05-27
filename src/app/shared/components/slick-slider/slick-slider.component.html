@@ -1,24 +1,34 @@
-<div lazy-load-images *ngIf="movies">
-	<ngx-slick class="carousel" [config]="slideConfig">
-		<div ngxSlickItem *ngFor="let movie of movies" class="slide movie" [ngClass]="{'big-slider': slideConfig.slidesToShow <= 4}">
-			<img [attr.data-src]="movie.Poster" [alt]="movie.Title" width="100%">
-			<a [routerLink]="['/details', movie.id]">
-				<div class="hover-content d-flex flex-column justify-content-between text-uppercase h-100 text-center">
-					<div class="text-content d-flex flex-column justify-content-around">
-						<div class="header">
-							<span class="title">{{(movie.Title.length > 10) && (slideConfig.slidesToShow > 4) ? (movie.Title | slice:0:10)+'..':(movie.Title) }} ({{movie.Year}})</span>
-							<span class="genres">{{movie.Genre}}</span>
-							<span class="runtime">{{movie.Runtime}}</span>
+<div class="carousel-slider">
+	<div class="slider-header p-3 d-inline-block">
+		<h4 class="title m-0 d-inline-block">{{message}}</h4>
+	</div>
+	<div lazy-load-images *ngIf="movies" [ngClass]="{'big-slider': slideConfig.slidesToShow <= 4}">
+		<ngx-slick class="carousel" [config]="slideConfig">
+			<div ngxSlickItem *ngFor="let movie of movies" class="slide movie">
+				<img [attr.data-src]="movie.Poster" [alt]="movie.Title" width="100%">
+				<a [routerLink]="['/details', movie.id]">
+					<div class="hover-content d-flex flex-column justify-content-between text-uppercase h-100 text-center">
+						<div class="text-content d-flex flex-column justify-content-around">
+							<div class="header">
+								<span class="title">{{(movie.Title.length > 10) && (slideConfig.slidesToShow > 4) ? (movie.Title | slice:0:10)+'..':(movie.Title) }}
+									({{movie.Year}})</span>
+								<span class="genres">{{movie.Genre}}</span>
+								<span class="runtime">{{movie.Runtime}}</span>
+							</div>
+							<div class="info d-flex flex-column justify-content-between">
+								<span class="rating">
+									<i class="fa fa-star"></i> {{movie.imdbRating}}/10
+								</span>
+							</div>
 						</div>
-						<div class="info d-flex flex-column justify-content-between">
-							<span class="rating">
-								<i class="fa fa-star"></i> {{movie.imdbRating}}/10
-							</span>
-						</div>
+						<button class="btn btn-sm btn-primary text-white pb-2">Se mere</button>
 					</div>
-					<button class="btn btn-sm btn-primary text-white pb-2">Se mere</button>
-				</div>
-			</a>
-		</div>
-	</ngx-slick>
+				</a>
+			</div>
+		</ngx-slick>
+	</div>
+
+	<div class="clearfix">
+		<a class="btn btn-lg bg-primary" [routerLink]="['/', 'movies']">Se Flere</a>
+	</div>
 </div>

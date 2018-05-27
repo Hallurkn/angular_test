@@ -33,12 +33,10 @@
 		padding: map-get($spacers, 2);
 		position: relative;
 		z-index: 2;
-		transform: scale(0.5);
+		transform: scale(0.85);
 		opacity: 0;
 		transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
 		background: rgba(255,255,255, 0.95);
-		border-radius: $border-radius;
-		box-shadow: 0 0 25px -10px $dark;
 
 		.text-content {
 			height: 100%;

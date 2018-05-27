@@ -1,26 +1,33 @@
-<loader-component [showSpinner]="this.api.showSpinner"></loader-component>
+<div>
+	<div class="row">
+		<div class="col">
+			<h2 class="mb-0 py-2">Find Film</h2>
+		</div>
+	</div>
 
-<div class="row" lazy-load-images *ngIf="filteredMovies">
-	<div class="col-xl-2 col-lg-3 col-md-4 col-6 p-0" *ngFor="let movie of filteredMovies | filter:searchFilter ">
-		<div class="movie find-movie-content" [attr.data-background-src]="movie.Poster">
-			<a [routerLink]="['/details', movie.id]">
-				<div class="hover-content d-flex flex-column justify-content-between p-2 text-uppercase h-100 text-center">
-					<div class="text-content d-flex flex-column justify-content-around">
-						<div class="header">
-							<span class="title">{{(movie.Title.length > 10) ? (movie.Title | slice:0:10)+'..':(movie.Title) }} ({{movie.Year}})</span>
-							<span class="genres">{{movie.Genre}}</span>
-							<span class="runtime">{{movie.Runtime}}</span>
+	<loader-component [showSpinner]="this.api.showSpinner"></loader-component>
+
+	<div class="row" lazy-load-images *ngIf="filteredMovies">
+		<div class="col-xl-2 col-lg-3 col-md-4 col-6 p-0" *ngFor="let movie of filteredMovies | filter:searchFilter">
+			<div class="movie find-movie-content" [attr.data-background-src]="movie.Poster">
+				<a [routerLink]="['/details', movie.id]">
+					<div class="hover-content d-flex flex-column justify-content-between p-2 text-uppercase h-100 text-center">
+						<div class="text-content d-flex flex-column justify-content-around">
+							<div class="header">
+								<span class="title">{{(movie.Title.length > 10) ? (movie.Title | slice:0:10)+'..':(movie.Title) }} ({{movie.Year}})</span>
+								<span class="genres">{{movie.Genre}}</span>
+								<span class="runtime">{{movie.Runtime}}</span>
+							</div>
+							<div class="info d-flex flex-column justify-content-between">
+								<span class="rating">
+									<i class="fa fa-star"></i> {{movie.imdbRating}}/10
+								</span>
+							</div>
 						</div>
-						<div class="info d-flex flex-column justify-content-between">
-							<span class="rating">
-								<i class="fa fa-star"></i> {{movie.imdbRating}}/10
-							</span>
-						</div>
+						<button class="btn btn-sm btn-primary text-white pb-2">See more</button>
 					</div>
-					<button class="btn btn-sm btn-primary text-white pb-2">See more</button>
-				</div>
-			</a>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
-

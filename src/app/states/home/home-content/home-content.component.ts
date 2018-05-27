@@ -1,3 +1,4 @@
+import { Movie } from '_shared';
 import { ApiService } from './../../../shared/services/api.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,7 @@ export class HomeContentComponent implements OnInit {
 
 	public slideConfigMain: any;
 	public slideConfigSecondary: any;
-	public movies: any;
+	public movies: Movie[];
 
 	public slick1entries = [
 		'tt1155592', 'tt1013753', 'tt0059579', 'tt0060196', 'tt0064116', 'tt0114608', 'tt0119345', 'tt0134084'
@@ -54,6 +55,7 @@ export class HomeContentComponent implements OnInit {
 			slidesToScroll: 6,
 			arrows: true,
 			infinite: true,
+			adaptiveHeight: false,
 			responsive: [
 				{
 					breakpoint: 748,

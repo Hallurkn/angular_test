@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['slick-slider.component.scss'],
 })
 export class SlickSliderComponent {
+	@Input() message: string;
 	@Input() movies: any;
 	@Input() slideConfig: any;
 
