@@ -25,28 +25,20 @@ export class ApiService {
 	// HandleError Method
 	private handleError(error: Response | any) {
 		console.error('ApiService::handleError', error);
+		this.toggleLoadingSpinner();
 		return Observable.throw(error);
 	}
 
-	public showLoadingSpinner() {
-		this.showSpinner = true;
-	}
-
-	public hideLoadingSpinner() {
-		this.showSpinner = false;
+	public toggleLoadingSpinner() {
+		this.showSpinner = !this.showSpinner;
 	}
 
 	public getAllMovies(): Observable<Movie[]> {
-		this.showLoadingSpinner();
+		this.toggleLoadingSpinner();
 		return new Observable(observer => {
-			// const localData = JSON.parse(localStorage.getItem('movies'));
-			// if (localData) {
-			// 	console.log('localData');
-			// 	observer.next(localData);
-			// 	return observer.complete();
-			// } else
 			if (this.storedMovies) {
 				observer.next(this.storedMovies);
+				this.toggleLoadingSpinner();
 				return observer.complete();
 			}
 			this.http
@@ -54,53 +46,64 @@ export class ApiService {
 				.map((response: Response) => (response.json() as Array<Movie>))
 				.catch(this.handleError)
 				.subscribe((movies: Array<Movie>) => {
-					localStorage.setItem('movies', JSON.stringify(movies));
 					this.storedMovies = movies;
 					observer.next(this.storedMovies);
-					observer.complete();
-					this.hideLoadingSpinner();
+					this.toggleLoadingSpinner();
+					return observer.complete();
 				});
 		});
 	}
 
-	// API: POST /todos
 	public addMovie(movie: Movie): Observable<Movie> {
+		this.toggleLoadingSpinner();
 		return this.http
 			.post(API_URL + '/movies', movie)
 			.map(response => {
+				this.toggleLoadingSpinner();
 				return response.json();
 			})
 			.catch(this.handleError);
 	}
 
-	// API: GET /todos/:id
 	public getMovieById(movieId: number): Observable<Movie> {
-		this.showLoadingSpinner();
+		this.toggleLoadingSpinner();
 		return this.http
 			.get(API_URL + '/movies/' + movieId)
 			.map(response => {
 				const movie = response.json();
-				this.hideLoadingSpinner();
+				this.toggleLoadingSpinner();
 				return movie;
 			})
 			.catch(this.handleError);
 	}
 
-	// DELETE /todos/:id
+	public updateMovie(movie: Movie): Observable<Movie> {
+		this.toggleLoadingSpinner();
+		return this.http
+			.put(API_URL + '/movies/' + movie.id, movie)
+			.map(response => {
+				this.toggleLoadingSpinner();
+				return response.json();
+			})
+			.catch(this.handleError);
+	}
+
 	public deleteMovieById(movieId: number): Observable<null> {
 		return this.http
 			.delete(API_URL + '/movies/' + movieId)
-			// .map(response => null)
 			.catch(this.handleError);
 	}
 
 	public getMovieByIMDBId(imdbID: any): Observable<Movie> {
+		this.toggleLoadingSpinner();
 		return this.http
 			.get(API_URL + '/movies')
 			.map(response => {
 				const movies = response.json();
 				const movie = movies.find(data => data.imdbID === imdbID);
+				this.toggleLoadingSpinner();
 				return movie;
-			});
+			})
+			.catch(this.handleError);
 	}
 }

@@ -4,7 +4,7 @@
 			<div class="form-group mb-0">
 				<input class="form-control" type="text" name="id" id="id" [(ngModel)]="id" #idCheck="ngModel" placeholder="ex. tt3774694"
 				required>
-				<div class="alert alert-info" [hidden]="!this.statusMessage || idCheck.pristine">{{this.statusMessage}}</div>
+				<div class="alert" [ngClass]="statusClass" [hidden]="!this.statusMessage || idCheck.pristine">{{this.statusMessage}}</div>
 			</div>
 
 			<div>

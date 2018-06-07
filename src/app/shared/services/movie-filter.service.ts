@@ -7,7 +7,7 @@ export class MovieFilterService {
 
 	private filteredMoviesSource = new BehaviorSubject([]);
 	public filteredMovies = this.filteredMoviesSource.asObservable();
-	public staticMoviesSource = new BehaviorSubject([]);
+	private staticMoviesSource = new BehaviorSubject([]);
 	public staticMovies = this.staticMoviesSource.asObservable();
 
 	constructor(private data: ApiService) {

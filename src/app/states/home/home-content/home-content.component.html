@@ -1,22 +1,18 @@
 <div class="home-content">
-	<div class="carousel-slider">
-		<div class="slider-header p-3 d-inline-block">
-			<h4 class="title m-0 d-inline-block">Nye Film</h4>
-		</div>
-		<slick-slider-component [movies]="slick1movies" [slideConfig]="slideConfigMain"></slick-slider-component>
-
-		<div class="clearfix">
-			<a class="btn btn-lg bg-primary" [routerLink]="['/', 'movies']">Se Flere</a>
-		</div>
+	<div class="my-3">
+		<slick-slider-component [movies]="slickMovies" message="Nye film" [slideConfig]="slideConfigMain"></slick-slider-component>
 	</div>
-	<div class="carousel-slider">
-		<div class="slider-header p-3 d-inline-block">
-			<h4 class="title m-0 d-inline-block">Nye Film</h4>
-		</div>
-		<slick-slider-component [movies]="slick1movies" [slideConfig]="slideConfigSecondary"></slick-slider-component>
-
-		<div class="clearfix">
-			<a class="btn btn-lg bg-primary" [routerLink]="['/', 'movies']">Se Flere</a>
-		</div>
+	<div class="my-3">
+		<slick-slider-component [movies]="slickMovies" message="Something else" [slideConfig]="slideConfigSecondary"></slick-slider-component>
 	</div>
+	<div class="my-3">
+		<slick-slider-component [movies]="slickMovies" message="Something else" [slideConfig]="slideConfigSecondary"></slick-slider-component>
+	</div>
+	<div class="my-3">
+		<slick-slider-component [movies]="slickMovies" message="Something else" [slideConfig]="slideConfigSecondary"></slick-slider-component>
+	</div>
+	<div class="my-3">
+		<slick-slider-component [movies]="slickMovies" message="Something else" [slideConfig]="slideConfigSecondary"></slick-slider-component>
+	</div>
+
 </div>

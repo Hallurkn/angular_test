@@ -13,10 +13,10 @@ export class HomeContentComponent implements OnInit {
 	public slideConfigSecondary: any;
 	public movies: Movie[];
 
-	public slick1entries = [
+	public slickEntries = [
 		'tt1155592', 'tt1013753', 'tt0059579', 'tt0060196', 'tt0064116', 'tt0114608', 'tt0119345', 'tt0134084'
 	];
-	public slick1movies = [];
+	public slickMovies = [];
 
 	constructor(private data: ApiService) {
 		this.slideConfigMain = {
@@ -85,7 +85,7 @@ export class HomeContentComponent implements OnInit {
 	ngOnInit(): void {
 		this.data.movies.subscribe(movieData => {
 			this.movies = movieData;
-			this.filterMovies(this.slick1entries, this.slick1movies);
+			this.filterMovies(this.slickEntries, this.slickMovies);
 		});
 	}
 

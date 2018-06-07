@@ -47,6 +47,7 @@ export class FindMoviesFiltersComponent implements OnInit {
 		this.curCountryFilter = '';
 		this.curGenreFilter = '';
 		this.searchFilter = '';
+		this.updateSearchFilter(this.searchFilter);
 		this.filterMovies();
 	}
 

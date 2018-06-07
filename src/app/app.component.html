@@ -2,10 +2,10 @@
 <div class="container px-0 px-sm-3 h-100">
 	<div class="bg-white page-wrapper d-flex flex-column">
 		<div [hidden]="!loading" class="container">
-			<h1>stuff stuff</h1>
+			<!-- <h1>Loading...</h1> -->
 			<!-- <loader-component [showSpinner]="loading"></loader-component> -->
 		</div>
-		<div [hidden]="loading" class="router-output">
+		<div [hidden]="loading" class="router-output h-100">
 			<router-outlet></router-outlet>
 		</div>
 		<div class="mt-auto">
