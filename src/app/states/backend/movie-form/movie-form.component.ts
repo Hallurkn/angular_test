@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ApiService, OMDBService } from '_shared/services/';
-import { Movie } from '_shared';
 
 @Component({
 	selector: 'movie-form-component',

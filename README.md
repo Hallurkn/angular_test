@@ -8,7 +8,14 @@
 * `npm run build` to prepare a distributable bundle.
 
 ## Development
+* Run `npm run server` to run the local dev server that serves the data.
 * Run `npm run dev` to run in HMR-mode using webpack-dev-server.
+
+## Creating movies
+In order to add or remove movies from the local database do the following:
+* Go to `/backend`
+* Enter the ID of a movie on IMDb. The ID of a movie can be found in the URL. I.e. `https://www.imdb.com/title/tt7286456/`, the ID is `tt7286456`.
+
 
 ## Linting
 
